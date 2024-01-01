@@ -1,0 +1,30 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  notebookdb:
+   container_name: notebook-db
+   image: mcr.microsoft.com/mssql/server:2022-latest
+   environment:
+     - ACCEPT_EULA=Y
+     - SA_PASSWORD=Password@123#
+   networks:
+     - backend
+   ports:
+     - 8001:1433
+  notebookapi:
+    container_name: notebook-api
+    image: ${DOCKER_REGISTRY-}notebookapi
+    build:
+      context: .
+      dockerfile: NotebookApi/Dockerfile
+    networks:
+       - backend
+    ports:
+       - 5000:5000
+    environment:
+        - DB_HOST=notebookdb
+        - DB_NAME=notebook-db
+        - DB_SA_PASSWORD=Password@123#
