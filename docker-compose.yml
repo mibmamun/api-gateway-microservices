@@ -28,3 +28,34 @@ services:
         - DB_HOST=notebookdb
         - DB_NAME=notebook-db
         - DB_SA_PASSWORD=Password@123#
+
+  messagedb:
+    container_name: message-db
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Password@123#
+      - POSTGRES_DB=message-db
+    networks:
+      - backend
+    ports:
+      - 5432:5432
+    restart: always
+    volumes:
+      - message_data:/var/lib/postgresql/data/ 
+  messageapi:
+    container_name: message-api
+    image: ${DOCKER_REGISTRY-}messageapi
+    build:
+      context: .
+      dockerfile: MessageApi/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 5001:5001
+    environment:
+      - ConnectionString=host=host.docker.internal;port=5432;database=message-db;username=postgres;password=Password@123#;Pooling=true;
+
+volumes:
+ message_data:
+  

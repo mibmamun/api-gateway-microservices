@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotebookApi", "NotebookApi\
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{237A04E3-9C2B-4524-8192-AEE9CD1894DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageApi", "MessageApi\MessageApi.csproj", "{25D18A15-D98E-412D-AC87-04528041E174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,12 +39,17 @@ Global
 		{237A04E3-9C2B-4524-8192-AEE9CD1894DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237A04E3-9C2B-4524-8192-AEE9CD1894DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237A04E3-9C2B-4524-8192-AEE9CD1894DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D18A15-D98E-412D-AC87-04528041E174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D18A15-D98E-412D-AC87-04528041E174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D18A15-D98E-412D-AC87-04528041E174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D18A15-D98E-412D-AC87-04528041E174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D5F54858-7987-46D2-96B8-E95EC2F78074} = {1A1D64D5-9E4F-4A54-AECD-AE7E4DFA87A4}
+		{25D18A15-D98E-412D-AC87-04528041E174} = {1A1D64D5-9E4F-4A54-AECD-AE7E4DFA87A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6605FCF-99C3-4024-88DD-FE5D02BAFDD5}
