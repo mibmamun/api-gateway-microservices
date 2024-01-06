@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "notebookapi": "StartDebugging",
-        "messageapi": "StartDebugging"
+        "messageapi": "StartDebugging",
+        "apigateway": "StartDebugging"
       }
     }
   }

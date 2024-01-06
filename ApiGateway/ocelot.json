@@ -1,0 +1,33 @@
+{
+  "Routes": [
+    //Notebook
+    {
+      "UpstreamPathTemplate": "/api/notebook",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "notebookapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/notebook"
+    },
+    //Message
+{
+      "UpstreamPathTemplate": "/api/message",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "messageapi",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/api/message"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:800/"
+  }
+}

@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthManager", "JwtAuthManager\JwtAuthManager.csproj", "{B6830366-9DC8-4222-9104-6386564E20C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuthManager", "JwtAuthManager\JwtAuthManager.csproj", "{B6830366-9DC8-4222-9104-6386564E20C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{22285BA5-66CB-43E7-BB6C-3260C921DFD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{1A1D64D5-9E4F-4A54-AECD-AE7E4DFA87A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationApi", "AuthenticationApi\AuthenticationApi.csproj", "{C2C9B566-1330-4CAC-A537-07DEB6080A05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationApi", "AuthenticationApi\AuthenticationApi.csproj", "{C2C9B566-1330-4CAC-A537-07DEB6080A05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotebookApi", "NotebookApi\NotebookApi.csproj", "{D5F54858-7987-46D2-96B8-E95EC2F78074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotebookApi", "NotebookApi\NotebookApi.csproj", "{D5F54858-7987-46D2-96B8-E95EC2F78074}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{237A04E3-9C2B-4524-8192-AEE9CD1894DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageApi", "MessageApi\MessageApi.csproj", "{25D18A15-D98E-412D-AC87-04528041E174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageApi", "MessageApi\MessageApi.csproj", "{25D18A15-D98E-412D-AC87-04528041E174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{E662B56D-82DD-4AD2-9DB0-24F2BBCFE40F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{25D18A15-D98E-412D-AC87-04528041E174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D18A15-D98E-412D-AC87-04528041E174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25D18A15-D98E-412D-AC87-04528041E174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E662B56D-82DD-4AD2-9DB0-24F2BBCFE40F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E662B56D-82DD-4AD2-9DB0-24F2BBCFE40F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E662B56D-82DD-4AD2-9DB0-24F2BBCFE40F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E662B56D-82DD-4AD2-9DB0-24F2BBCFE40F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D5F54858-7987-46D2-96B8-E95EC2F78074} = {1A1D64D5-9E4F-4A54-AECD-AE7E4DFA87A4}
 		{25D18A15-D98E-412D-AC87-04528041E174} = {1A1D64D5-9E4F-4A54-AECD-AE7E4DFA87A4}
+		{E662B56D-82DD-4AD2-9DB0-24F2BBCFE40F} = {22285BA5-66CB-43E7-BB6C-3260C921DFD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B6605FCF-99C3-4024-88DD-FE5D02BAFDD5}

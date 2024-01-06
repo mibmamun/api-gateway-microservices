@@ -22,8 +22,8 @@ services:
       dockerfile: NotebookApi/Dockerfile
     networks:
        - backend
-    ports:
-       - 5000:5000
+    #ports:
+       #- 5000:8080
     environment:
         - DB_HOST=notebookdb
         - DB_NAME=notebook-db
@@ -51,11 +51,24 @@ services:
       dockerfile: MessageApi/Dockerfile
     networks:
       - backend
-    ports:
-      - 5001:5001
+    #ports:
+      #- 5001:8080
     environment:
       - ConnectionString=host=host.docker.internal;port=5432;database=message-db;username=postgres;password=Password@123#;Pooling=true;
+
+  apigateway:
+    container_name: api-gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    networks:
+     - backend
+    ports:
+     - 8002:8080
+       
 
 volumes:
  message_data:
   
+
