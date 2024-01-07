@@ -6,7 +6,8 @@
       "serviceActions": {
         "notebookapi": "StartDebugging",
         "messageapi": "StartDebugging",
-        "apigateway": "StartDebugging"
+        "apigateway": "StartDebugging",
+        "authenticationapi": "StartDebugging"
       }
     }
   }

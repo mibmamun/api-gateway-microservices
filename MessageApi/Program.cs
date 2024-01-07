@@ -1,6 +1,7 @@
 
 using MessageApi.Data;
 using Microsoft.EntityFrameworkCore;
+using JwtAuthManager;
 
 namespace MessageApi
 {
@@ -18,6 +19,7 @@ namespace MessageApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddCustomJwtAuth();
 
             var app = builder.Build();
 
@@ -27,7 +29,7 @@ namespace MessageApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

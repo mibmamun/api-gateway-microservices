@@ -1,5 +1,6 @@
 ﻿using MessageApi.Data;
 using MessageApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,7 @@ namespace MessageApi.Controllers
             _context = context;
         }
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Message>>> GetMessages()
         {
             return await _context.Messages.ToListAsync();
@@ -28,6 +30,7 @@ namespace MessageApi.Controllers
             return message;
         }
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Message>> CreateMessage (Message message)
         {
             _context.Messages.Add(message);

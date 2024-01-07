@@ -68,7 +68,17 @@ services:
      - 8002:8080
        
 
+  authenticationapi:
+    container_name: authentication-api
+    image: ${DOCKER_REGISTRY-}authenticationapi
+    build:
+      context: .
+      dockerfile: AuthenticationApi/Dockerfile
+    networks:
+     - backend
+
 volumes:
  message_data:
   
+
 
